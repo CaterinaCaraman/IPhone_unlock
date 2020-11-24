@@ -1,16 +1,23 @@
-// Declaring variables for each IDS
-var counter = document.getElementById("counter-number");
-var Increment = document.getElementById("increment");
-var Decrement = document.getElementById("decrement");
+//var Counter = document.getElementById("counter");
+//var Plus = document.getElementById("plus");
+//var Minus = document.getElementById("minus");
 
-var number = 0;
+var Counter = 0;
+function plus() {
+    count += 1;
+    document.getElementById('counter').innerHTML = count;
+}
 
-Increment.addEventListener("click", function(){
-    number++;
-    counter.innerHTML = number;
-});
+function minus() {
+    count -= 1;
+    document.getElementById('counter').innerHTML = count;
+}
 
-Decrement.addEventListener("click", function(){
-    number--;
-    counter.innerHTML = number;
-});
+/*Plus.onclick = function() {
+    count += 1;
+    Counter.innerHTML = count;
+  };
+  Minus.onclick = function() {
+    count -= 1;
+    Counter.innerHTML = count;
+  };
