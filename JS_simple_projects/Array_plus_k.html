@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array_PLUS</title>
+</head>
+<body>
+  
+  <form>
+    <label for="numbers">Enter an array of numbers:</label><br>
+    <input type="text" id="findPair" name="Nr"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  
+<script>
+  const findPair = (array, k) => {
+  array.sort((a, b) => a - b);
+  let left = 0;
+  let right = array.length - 1;
+
+  while (left < right) {
+    const sum = array[left] + array[right];
+    if (sum === k) {
+      return true;
+    } else if (sum < k) {
+      left += 1;
+    } else {
+      right -= 1;
+    }
+  }
+
+  return false;
+}
+
+</script>
+</body>
+</html>

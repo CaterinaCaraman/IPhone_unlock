@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array_PLUS</title>
+  </head>
+<body>
+  
+  <form>
+    <label for="numbers">Enter an array of numbers:</label><br>
+    <input type="text" id="findPair" onclick="findPair()"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  
+<script>
+  function findPair(arr, k){
+  for( var i=0; i < arr.length; i++ ){
+    for(var j= i+1; j < arr.length; j++){
+       if (arr[i] + arr[j] === k){
+        return true;
+      }
+     }
+    }
+    return false;
+  }
+
+</script>
+</body>
+</html>
